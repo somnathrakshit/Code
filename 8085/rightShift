@@ -1,0 +1,8 @@
+MVI C,10H
+MOV A, C
+RAR
+RAR
+RAR
+RAR
+MOV C, A
+HLT

@@ -1,0 +1,4 @@
+LDA 4400H; "Get the number"
+CMA; "Complement number"
+STA 4401H; "Store the result"
+HLT; "Terminate program execution"
