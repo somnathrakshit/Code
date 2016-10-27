@@ -1,0 +1,30 @@
+ar_h(u) := if( u >= 1 ) then 
+               %pi 
+           else if( u > -1 ) then 
+               %pi - acos(u) + u*sqrt(1-u^2) 
+           else 
+                0;
+public static double ar_h(double
+
+ar_quad(u,v) := 
+    if( u^2 + v^2 <= 1) then 
+        (ar_h(u)+ar_h(v))/2 - %pi/4 + u*v 
+    else if( u <= -1 or v <= -1) then
+        0
+    else if( u >= 1 and v >= 1 ) then 
+        %pi
+    else if( u >= 1 )then 
+        ar_h(v)
+    else if( v >= 1 ) then 
+        ar_h(u)
+    else if( u >= 0 and v >= 0 ) then
+        ar_h(u)+ar_h(v) - %pi
+    else if( u >= 0 and v <= 0 ) then 
+        ar_h(v)
+    else if( u <= 0 and v >= 0 ) then
+        ar_h(u)
+    else
+        0;
+
+ar_rect(x0,y0,x1,y1) := ar_quad(x0,y0) + ar_quad(x1,y1) - ar_quad(x0,y1) - ar_quad(x1,y0);
+ar_area(r,xc,yc,x0,y0,x1,y1) := r^2 * ar_rect((x0-xc)/r,(y0-yc)/r,(x1-xc)/r,(y1-yc)/r);

@@ -1,0 +1,4 @@
+6) Data structures (Advanced): Trie, Segment trees, Fenwick tree or Binary indexed tree(BIT), Disjoint data structures.
+7) Strings: Knuth Morris Pratt(KMP), Z algorithm, Suffix arrays/Suffix trees. These are bit advanced algorithms.
+8) Computational geometry: Graham-Scan for convex hull, Line sweep.
+9) Game theory: Basic principles of Nim game, Grundy numbers, Sprague-Grundy theorem

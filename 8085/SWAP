@@ -1,0 +1,7 @@
+LDA 4000H; "Get the contents of memory location 4000H into accumulator"
+MOV B, A; "Save the contents into B register"
+LDA 4001H; "Get the contents of memory location 4001Hinto accumulator"
+STA 4000H; "Store the contents of accumulator at address 4000H"
+MOV A, B; "Get the saved contents back into A register"
+STA 4001H; "Store the contents of accumulator at address 4001H"
+HLT

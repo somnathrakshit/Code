@@ -1,0 +1,6 @@
+LHLD 4000H; Get first I6-bit number
+XCHG; Save first I6-bit number in DE
+LHLD 4002H; Get second I6-bit number in HL
+DAD D; Add DE and HL
+SHLD 4004H; Store I6-bit result in memory locations 4004H and 4005H.
+HLT; Terminate program execution
